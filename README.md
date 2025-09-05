@@ -1,4 +1,4 @@
-# Somethin Meter
+# Somethin Meter Simulator
 
 Identifier: somethin-meter
 
