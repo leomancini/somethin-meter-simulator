@@ -1,18 +1,21 @@
 import React from "react";
-import styled from "styled-components";
-
-const Page = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 24px;
-  color: #333;
-`;
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+import Visualizer from "./pages/Visualizer";
 
 function App() {
-  return <Page>Hello world!</Page>;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/visualizer" element={<Visualizer />} />
+        <Route path="/" element={<Navigate to="/visualizer" replace />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
-
